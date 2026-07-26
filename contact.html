@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Contact | Swapneel Das</title>
+    
+    <!-- Favicon placeholder (matches original structure) -->
+    <link rel="icon" type="image/jpeg" href="1.jpeg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --wp-admin-blue: #2271b1;
+            --wp-dark: #1d2327;
+            --wp-light-grey: #f0f0f1;
+            --wp-border: #dcdcde;
+            --aqua-accent: #00ffff;
+            --aqua-dark: #00ced1;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2c3338;
+            background-color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* Ensure footer stays at bottom if content is short */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Source Serif 4', serif;
+            color: var(--wp-dark);
+            letter-spacing: -0.01em;
+        }
+
+        nav {
+            border-bottom: 1px solid var(--wp-border);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-item {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #50575e;
+            transition: color 0.2s ease;
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-item:hover {
+            color: var(--wp-admin-blue);
+        }
+
+        .wp-button-primary {
+            background-color: var(--wp-dark);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+            display: inline-block;
+            text-align: center;
+            min-width: 160px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .wp-button-primary:active {
+            transform: scale(0.98);
+        }
+        
+        .wp-button-primary:hover {
+            background-color: #000;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--wp-border);
+            border-radius: 4px;
+            background-color: #fafafa;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--wp-admin-blue);
+            box-shadow: 0 0 0 1px var(--wp-admin-blue);
+            background-color: #fff;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--wp-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Form Card Styling based on main page wp-block-card */
+        .form-card {
+            background: #fff;
+            border: 1px solid var(--wp-border);
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        @media (min-width: 768px) {
+            .form-card {
+                padding: 3rem;
+            }
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--wp-light-grey); }
+        ::-webkit-scrollbar-thumb { background: #c3c4c7; border-radius: 10px; }
+        
+        /* Main content flex-grow to push footer down */
+        main {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-5 md:px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-slate-900">
+                SWAPNEEL <span class="text-blue-600">DAS</span>
+            </a>
+            
+            <div>
+                <a href="index.html" class="nav-item">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-20 px-5 md:px-6 bg-[#fafafa]">
+        <div class="max-w-3xl mx-auto">
+            
+            <!-- Header for Contact Page -->
+            <div class="text-center mb-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-slate-600">Have a question or want to work together? Leave a message below.</p>
+            </div>
+
+            <!-- Form Container -->
+            <div class="form-card">
+                <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Full Name Input -->
+                        <div>
+                            <label for="fullName" class="form-label">Full Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required 
+                                   class="form-input" placeholder="John Doe">
+                        </div>
+                        
+                        <!-- Email Input -->
+                        <div>
+                            <label for="email" class="form-label">Email Address <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required 
+                                   class="form-input" placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <!-- Subject Input -->
+                    <div>
+                        <label for="subject" class="form-label">Subject <span class="text-red-500">*</span></label>
+                        <input type="text" id="subject" name="subject" required 
+                               class="form-input" placeholder="How can I help you?">
+                    </div>
+
+                    <!-- Message Textarea -->
+                    <div>
+                        <label for="message" class="form-label">Message <span class="text-red-500">*</span></label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  class="form-textarea resize-y" placeholder="Write your message here..."></textarea>
+                    </div>
+
+                    <!-- Submit Button & Feedback area -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                        <button type="submit" class="wp-button-primary w-full sm:w-auto">
+                            Send Message
+                        </button>
+                        <span id="formFeedback" class="text-sm hidden font-medium"></span>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-slate-100 text-center px-5 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-slate-500 text-xs md:text-sm mb-6">© 2026 Swapneel Das. All rights reserved.</p>
+            <div class="flex justify-center items-center space-x-3 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <button onclick="openModal('privacy')" class="hover:text-blue-600 transition p-2">Privacy Policy</button>
+                <span class="text-slate-200">•</span>
+                <button onclick="openModal('terms')" class="hover:text-blue-600 transition p-2">Terms of Use</button>
+            </div>
+        </div>
+    </footer>
+
+    <div id="privacy-modal" class="fixed inset-0 bg-black/70 z-[100] hidden items-center justify-center p-5 backdrop-blur-sm" onclick="if(event.target === this) closeModal('privacy')">
+        <div class="bg-white max-w-xl w-full p-8 md:p-10 rounded-sm relative shadow-2xl">
+            <button onclick="closeModal('privacy')" class="absolute top-4 right-4 text-slate-400 hover:text-black p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Privacy Policy</h2>
+            <div class="text-slate-600 text-sm md:text-base leading-relaxed">
+                I value your privacy. This site does not use cookies for tracking. Personal information shared via email or contact form is strictly used for direct communication.
+            </div>
+        </div>
+    </div>
+
+    <div id="terms-modal" class="fixed inset-0 bg-black/70 z-[100] hidden items-center justify-center p-5 backdrop-blur-sm" onclick="if(event.target === this) closeModal('terms')">
+        <div class="bg-white max-w-xl w-full p-8 md:p-10 rounded-sm relative shadow-2xl">
+            <button onclick="closeModal('terms')" class="absolute top-4 right-4 text-slate-400 hover:text-black p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Terms of Use</h2>
+            <div class="text-slate-600 text-sm md:text-base leading-relaxed">
+                All content within this portfolio is the property of Swapneel Das. Unauthorized reproduction or commercial use is prohibited.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal functions
+        function openModal(id) { 
+            document.getElementById(id + '-modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) { 
+            document.getElementById(id + '-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Form Submission Logic connected to Google Apps Script
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzRoSY8CBTtgxNVkwoTGHf6T33VePe_w1fWwjV3DVnWUIM9uTaihJorURmsfPyKnRsl0Q/exec';
+        
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent page reload
+            
+            const form = event.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const feedback = document.getElementById('formFeedback');
+            const originalText = btn.innerText;
+            
+            // Visual loading state
+            btn.innerText = 'Sending...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+            feedback.classList.add('hidden');
+            
+            // Send data to Google Apps Script
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    // Reset button
+                    btn.innerText = originalText;
+                    btn.style.opacity = '1';
+                    btn.disabled = false;
+                    
+                    // Show success message
+                    feedback.textContent = 'Message sent successfully!';
+                    feedback.classList.remove('hidden');
+                    feedback.classList.remove('text-red-600');
+                    feedback.classList.add('text-green-600');
+                    
+                    // Clear form
+                    form.reset();
+                    
+                    // Hide message after a few seconds
+                    setTimeout(() => {
+                        feedback.classList.add('hidden');
+                    }, 4000);
+                })
+                .catch(error => {
+                    // Reset button
+                    btn.innerText = originalText;
+                    btn.style.opacity = '1';
+                    btn.disabled = false;
+                    
+                    // Show error message
+                    feedback.textContent = 'Error! Message not sent.';
+                    feedback.classList.remove('hidden');
+                    feedback.classList.remove('text-green-600');
+                    feedback.classList.add('text-red-600');
+                    console.error('Error!', error.message);
+                });
+        }
+    </script>
+</body>
+</html>
