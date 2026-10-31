@@ -39,9 +39,9 @@
     "description": "Independent Forex trader specializing in XAU/USD (Gold) technical analysis and market structure execution.",
     "knowsAbout": ["Forex Trading", "XAU/USD", "Technical Analysis", "Price Action", "Risk Management"],
     "sameAs": [
-      "https://instagram.com",
-      "https://www.tradingview.com",
-      "https://discord.gg"
+      "https://instagram.com/swapneel_das",
+      "https://www.tradingview.com/u/etherealneel/",
+      "https://discord.gg/ytbmxHNF5W"
     ]
   }
   </script>
@@ -291,14 +291,6 @@
       font-weight: 500;
     }
     .profile-meta > span { display: inline-flex; align-items: center; gap: 6px; }
-    .status-dot { 
-      width: 7px; 
-      height: 7px; 
-      background: #5ab276; 
-      border-radius: 50%; 
-      display: inline-block; 
-      box-shadow: 0 0 0 3px rgba(90, 178, 118, 0.18); 
-    }
     .meta-divider { width: 1px; height: 13px; background: var(--line); }
 
     /* Interactive Stats Bar */
@@ -366,15 +358,17 @@
     /* Cards & Lists */
     .grid-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 16px;
     }
     .concept-card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 4px;
-      padding: 18px;
+      padding: 20px;
       transition: transform .2s ease, border-color .2s ease;
+      display: flex;
+      flex-direction: column;
     }
     .concept-card:hover {
       transform: translateY(-2px);
@@ -389,16 +383,33 @@
       padding: 3px 7px;
       border-radius: 3px;
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      align-self: flex-start;
     }
     .concept-title {
-      font: 700 15px "Manrope", sans-serif;
-      margin-bottom: 6px;
+      font: 700 16px "Manrope", sans-serif;
+      margin-bottom: 10px;
     }
-    .concept-desc {
+    .concept-rules {
       font-size: 12px;
       color: var(--muted);
       line-height: 1.6;
+      padding-left: 16px;
+      margin: 0 0 14px 0;
+    }
+    .concept-rules li {
+      margin-bottom: 6px;
+    }
+    .concept-risk-box {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px dashed var(--line);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
     }
 
     /* Workflow Cards */
@@ -415,9 +426,11 @@
       border-radius: 4px; 
       transition: transform .2s ease, border-color .2s ease, background .2s ease; 
       text-decoration: none;
+    }
+    a.link-card {
       cursor: pointer;
     }
-    .link-card:hover { 
+    a.link-card:hover { 
       transform: translateY(-2px); 
       border-color: var(--accent); 
       background: var(--surface); 
@@ -443,7 +456,7 @@
     .link-sub { font-size: 11.5px; color: var(--muted); font-weight: 400; margin-top: 2px; }
     .link-description { color: var(--muted); font-size: 11.5px; text-align: right; font-weight: 500; }
     .link-arrow { color: var(--accent); font-size: 16px; margin-left: 10px; transition: transform .2s; }
-    .link-card:hover .link-arrow { transform: translateX(3px); }
+    a.link-card:hover .link-arrow { transform: translateX(3px); }
 
     /* Philosophy Tabs Section */
     .philosophy-box {
@@ -604,17 +617,13 @@
           </div>
 
           <p class="bio">
-            Independent Forex trader specializing exclusively in <strong>XAU/USD (Gold)</strong>. Driven by disciplined execution, technical precision, liquidity dynamics, and a strong commitment to long-term risk management and financial independence.
+            Quantitative price-action practitioner specializing exclusively in <strong>XAU/USD (Gold)</strong>. Focused on structural market analysis, institutional liquidity sweeps, disciplined risk exposure, and long-term capital preservation.
           </p>
 
           <div class="profile-meta">
-            <span><span class="status-dot"></span> Active London & NY Sessions</span>
-            <span class="meta-divider"></span>
             <span><i data-lucide="target" style="width: 13px; height: 13px;"></i> XAU/USD Specialist</span>
             <span class="meta-divider"></span>
             <span><i data-lucide="calendar" style="width: 13px; height: 13px;"></i> Journey Since May 2024</span>
-            <span class="meta-divider"></span>
-            <span><i data-lucide="shield-check" style="width: 13px; height: 13px;"></i> Capital Preservation First</span>
           </div>
 
         </div>
@@ -627,26 +636,64 @@
             <div class="eyebrow">Core Framework</div>
             <h2>Technical <span>Analysis & Playbook</span></h2>
           </div>
-          <div class="link-count">03 Core Concepts</div>
+          <div class="link-count">03 Execution Setups</div>
         </div>
 
         <div class="grid-cards">
           <div class="concept-card">
-            <span class="concept-tag">TJL</span>
+            <span class="concept-tag">TJL SETUP</span>
             <div class="concept-title">Trendline Joint Level</div>
-            <div class="concept-desc">High-probability continuation setups formed at key trendline joint levels, capturing trend resumptions with structural precision.</div>
+            <ol class="concept-rules">
+              <li>Mark levels on <strong>15M & 1H</strong> timeframes.</li>
+              <li>Wait for price to reach target level.</li>
+              <li>Select entry timeframe based on zone size:
+                <br>• &lt;20–25 pips: 1M confirmation
+                <br>• 25–80 pips: 5M confirmation
+                <br>• &gt;80 pips: 1M CHoCH rule
+              </li>
+              <li>Confirmation: Body engulfs previous candle body.</li>
+              <li>Wait for candle close before entering.</li>
+            </ol>
+            <div class="concept-risk-box">
+              <span>Max SL: 35 pips</span>
+              <span>Min TP: 100 pips</span>
+            </div>
           </div>
 
           <div class="concept-card">
-            <span class="concept-tag">QML</span>
-            <div class="concept-title">Quasimodo Levels</div>
-            <div class="concept-desc">High-probability structural reversal setups identified through Quasimodo (QML) price action geometry and key level breaks.</div>
+            <span class="concept-tag">QML SETUP</span>
+            <div class="concept-title">Quasimodo Level</div>
+            <ol class="concept-rules">
+              <li>Mark levels on <strong>15M & 1H</strong> timeframes.</li>
+              <li>Wait for price to reach target level.</li>
+              <li>Select entry timeframe based on zone size:
+                <br>• &lt;20–25 pips: 1M confirmation
+                <br>• 25–80 pips: 5M confirmation
+                <br>• &gt;80 pips: 1M CHoCH rule
+              </li>
+              <li>Confirmation: Body engulfs previous candle body.</li>
+              <li>Wait for candle close before entering.</li>
+            </ol>
+            <div class="concept-risk-box">
+              <span>Max SL: 35 pips</span>
+              <span>Min TP: 100 pips</span>
+            </div>
           </div>
 
           <div class="concept-card">
-            <span class="concept-tag">LQS</span>
+            <span class="concept-tag">LQS SETUP</span>
             <div class="concept-title">Liquidity Sweep</div>
-            <div class="concept-desc">Studying market sweeps, fakeouts, and institutional liquidity grabs before securing high-ratio trade execution.</div>
+            <ol class="concept-rules">
+              <li>Use <strong>1H, 4H & 1D</strong> for bias and levels.</li>
+              <li>Wait for price to sweep previous candle high/low.</li>
+              <li>Direct entry on nearest 68.80% Fib or S/D candle.</li>
+              <li>Or wait for fresh sweep confirmation (Buy: Bearish candle / Sell: Bullish candle engulfing).</li>
+              <li>Or enter upon price tapping new S/D zone.</li>
+            </ol>
+            <div class="concept-risk-box">
+              <span>Max SL: 35 pips</span>
+              <span>Min TP: 100 pips</span>
+            </div>
           </div>
         </div>
       </section>
@@ -664,14 +711,28 @@
         <div class="link-list">
           <div class="link-card">
             <div class="link-main">
-              <div class="link-icon"><i data-lucide="bar-chart-2"></i></div>
+              <div class="link-icon"><i data-lucide="clock"></i></div>
               <div class="link-info">
-                <div>TradingView Multi-Timeframe Analysis</div>
-                <div class="link-sub">HTF Market Direction & Key Level Mapping</div>
+                <div>London & New York Sessions</div>
+                <div class="link-sub">Active Hours: London (2:00 PM BST) & New York (6:30 PM / 7:30 PM BST)</div>
               </div>
             </div>
-            <div class="link-description">Charting Platform</div>
+            <div class="link-description">Trading Windows</div>
           </div>
+
+          <a href="https://www.tradingview.com/chart/pWvbEBzw/" target="_blank" rel="noopener noreferrer" class="link-card">
+            <div class="link-main">
+              <div class="link-icon"><i data-lucide="bar-chart-2"></i></div>
+              <div class="link-info">
+                <div>TradingView Live Charting</div>
+                <div class="link-sub">Live Synced XAU/USD Multi-Timeframe Analysis & Key Levels</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <div class="link-description">Live Charting</div>
+              <i data-lucide="arrow-up-right" class="link-arrow"></i>
+            </div>
+          </a>
 
           <div class="link-card">
             <div class="link-main">
@@ -684,16 +745,19 @@
             <div class="link-description">Execution Environment</div>
           </div>
 
-          <div class="link-card">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="link-card">
             <div class="link-main">
-              <div class="link-icon"><i data-lucide="clock"></i></div>
+              <div class="link-icon"><i data-lucide="notebook-pen"></i></div>
               <div class="link-info">
-                <div>London & New York Volatility Hours</div>
-                <div class="link-sub">Dedicated Focus During Peak Liquidity Sessions</div>
+                <div>Public Notion Trading Journal</div>
+                <div class="link-sub">Synced Daily Trade Logs, Case Studies & Performance Analytics</div>
               </div>
             </div>
-            <div class="link-description">Trading Windows</div>
-          </div>
+            <div style="display: flex; align-items: center;">
+              <div class="link-description">Live Journal</div>
+              <i data-lucide="arrow-up-right" class="link-arrow"></i>
+            </div>
+          </a>
         </div>
       </section>
 
@@ -780,7 +844,7 @@
       </div>
 
       <div class="link-list">
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="link-card">
+        <a href="https://instagram.com/swapneel_das" target="_blank" rel="noopener noreferrer" class="link-card">
           <div class="link-main">
             <div class="link-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -791,7 +855,7 @@
             </div>
             <div class="link-info">
               <div>Instagram Profile</div>
-              <div class="link-sub">Trading Journey & Behind the Scenes</div>
+              <div class="link-sub">@swapneel_das · Trading Journey & Behind the Scenes</div>
             </div>
           </div>
           <div style="display: flex; align-items: center;">
@@ -800,12 +864,12 @@
           </div>
         </a>
 
-        <a href="https://www.tradingview.com" target="_blank" rel="noopener noreferrer" class="link-card">
+        <a href="https://www.tradingview.com/u/etherealneel/" target="_blank" rel="noopener noreferrer" class="link-card">
           <div class="link-main">
             <div class="link-icon"><i data-lucide="candlestick-chart"></i></div>
             <div class="link-info">
               <div>TradingView Profile</div>
-              <div class="link-sub">Public XAU/USD Technical Analysis & Charts</div>
+              <div class="link-sub">@etherealneel · Public XAU/USD Technical Analysis & Charts</div>
             </div>
           </div>
           <div style="display: flex; align-items: center;">
@@ -814,7 +878,7 @@
           </div>
         </a>
 
-        <a href="https://discord.gg" target="_blank" rel="noopener noreferrer" class="link-card">
+        <a href="https://discord.gg/ytbmxHNF5W" target="_blank" rel="noopener noreferrer" class="link-card">
           <div class="link-main">
             <div class="link-icon"><i data-lucide="message-square"></i></div>
             <div class="link-info">
@@ -828,12 +892,12 @@
           </div>
         </a>
 
-        <a href="mailto:contact@swapneeldas.com" class="link-card">
+        <a href="mailto:etherealneel@gmail.com" class="link-card">
           <div class="link-main">
             <div class="link-icon"><i data-lucide="mail"></i></div>
             <div class="link-info">
               <div>Email Contact</div>
-              <div class="link-sub">Direct Inquiries & Professional Contact</div>
+              <div class="link-sub">etherealneel@gmail.com · Direct Inquiries & Professional Contact</div>
             </div>
           </div>
           <div style="display: flex; align-items: center;">
