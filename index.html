@@ -12,9 +12,9 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://swapneeldas.com/">
 
-  <!-- Favicon Icons -->
-  <link rel="icon" type="image/svg+xml" href="https://drive.google.com/file/d/1Qd_kpgoBnlZ-EbnIIUC-uoHKgXYaq-MV/view?usp=drive_link">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23141512'/><rect x='10' y='10' width='80' height='80' rx='12' fill='none' stroke='%23c6a66c' stroke-width='6'/><text x='50%' y='62%' font-family='sans-serif' font-weight='900' font-size='42' fill='%23c6a66c' text-anchor='middle'>SD</text></svg>">
+  <!-- Favicon Icons (Using Profile Photo) -->
+  <link rel="icon" type="image/jpeg" href="https://lh3.googleusercontent.com/d/1bFpcYxI_u_55ko3k22mgOpYR40Xy0b2R">
+  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1bFpcYxI_u_55ko3k22mgOpYR40Xy0b2R">
 
   <!-- Open Graph / Facebook / LinkedIn SEO -->
   <meta property="og:type" content="website">
@@ -95,7 +95,7 @@
     a { color: inherit; text-decoration: none; }
     button { font: inherit; background: none; border: none; padding: 0; cursor: pointer; }
     
-    .page-shell { width: 100%; max-width: 960px; padding: 0 32px; margin: 0 auto; box-sizing: border-box; }
+    .page-shell { width: 100%; padding: 0 48px; margin: 0 auto; box-sizing: border-box; }
     
     /* Topbar Navigation */
     .topbar { 
@@ -412,6 +412,52 @@
     .footer a { color: var(--text); transition: color .2s; }
     .footer a:hover { color: var(--accent); }
 
+    /* FAQ Section Accordion Styling */
+    .faq-list { display: grid; gap: 12px; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: border-color .2s ease;
+    }
+    .faq-item[open] {
+      border-color: var(--accent);
+    }
+    .faq-question {
+      padding: 18px 22px;
+      font: 600 15px "Manrope", sans-serif;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      user-select: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-chevron {
+      color: var(--accent);
+      transition: transform 0.25s ease;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+    .faq-item[open] .faq-chevron {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      padding: 0 22px 20px 22px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--muted);
+      border-top: 1px dashed var(--line);
+      margin-top: 4px;
+      padding-top: 14px;
+    }
+
     @media (max-width: 640px) {
       .page-shell { width: 100%; padding: 0 18px; }
       .topbar { height: 72px; }
@@ -427,6 +473,8 @@
       .link-description { font-size: 10px; text-align: left; }
       .link-main { font-size: 13.5px; }
       .note-card { padding: 18px; gap: 14px; }
+      .faq-question { padding: 14px 16px; font-size: 14px; }
+      .faq-answer { padding: 12px 16px 16px 16px; font-size: 13px; }
       .footer { flex-direction: column; justify-content: center; text-align: center; gap: 10px; padding: 24px 0; }
     }
   </style>
@@ -726,6 +774,69 @@
             <i data-lucide="arrow-up-right" class="link-arrow"></i>
           </div>
         </a>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions (FAQ) Section -->
+    <section class="links-section">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Information</div>
+          <h2>Frequently Asked <span>Questions</span></h2>
+        </div>
+        <div class="link-count">05 Answers</div>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span>1. Who is Swapneel Das?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </summary>
+          <div class="faq-answer">
+            Swapneel Das is a student and independent Forex trader from Bangladesh. He is focused on personal growth, continuous learning, financial independence, and building a meaningful future.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>2. What do you do professionally?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </summary>
+          <div class="faq-answer">
+            I am an independent Forex trader and market enthusiast. Alongside trading, I pursue my academic studies in English Literature and Language.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>3. What are your main interests?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </summary>
+          <div class="faq-answer">
+            My interests include financial markets, technology, literature, personal development, and exploring new ideas. I value knowledge, independence, and continuous improvement.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>4. What are your long-term goals?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </summary>
+          <div class="faq-answer">
+            My goal is to achieve financial independence, build something meaningful through my work, support my family, and create a life defined by freedom and purpose.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>5. What is your personal philosophy?</span>
+            <i data-lucide="chevron-down" class="faq-chevron"></i>
+          </summary>
+          <div class="faq-answer">
+            I believe in working independently, staying disciplined, keeping my ambitions private, and letting results speak for themselves. I prefer consistent progress over temporary recognition.
+          </div>
+        </details>
       </div>
     </section>
 
